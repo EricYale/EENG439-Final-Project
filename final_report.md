@@ -7,10 +7,18 @@ by Eric Yoon and Linh Pham
 
 **Goal**: Classify Yale images and non-Yale images 
 
-Method: 
-- Finetune ResNet and VGG models for classification 
-- Training on Yale campus related images 
+# 1. Data Preprocessing 
+Total amount of images: 1,0000
+- 409 images collected from IG yale_vibes and friends (Dec 10) -> 500 goal
+- 500 scenery images from Places365 
 
-1. Need to see how non-finetuned models work on training Yale/Non Yale 
-2. Train model 
-3. Compare final results 
+- split into train, test, validation 
+
+# 2. Testing model on regular VGG and ResNET 
+
+# 3. FineTune model for Yale specific 
+
+# 4. Re-run on fine tune models 
+
+# 5. Compare results 
+
