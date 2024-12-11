@@ -4,5 +4,6 @@
 */*.jpeg
 *.DS_Store
 *.pyc
-
+*.pt
+*.pth
 data/
