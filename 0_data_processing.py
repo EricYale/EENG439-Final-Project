@@ -12,6 +12,7 @@ import pathlib
 from torchvision import transforms, datasets
 import random
 import shutil
+from torchvision.transforms.functional import to_pil_image
 
 transform = transforms.Compose([
     transforms.Resize((500, 500)),
@@ -82,8 +83,9 @@ def places365_download():
         download=(not os.path.exists('data/places365/val_256')), # Download the dataset only if data/places365/val_256 doesn't exist
         transform=transform     # Apply the defined transformations
     )
-    places365_dataset = datasets.Places365(root='data/places365/', download=False)
-    print(f"Number of images in split: {len(places365_dataset)}")
+
+    print(f"Number of images: {len(places365_dataset)}")
+    print(f"Classes: {places365_dataset.classes}")
 
     categories = places365_dataset.classes
 
@@ -128,25 +130,26 @@ def places365_download():
     saved_count = {category: 0 for category in desired_indices.values()}
 
     print(f"Desired Indices: {desired_indices}")
-    total_images = 500 
+    total_images = 1200 
     output_dir = 'data/non_yale'
 
     # Save images into a single folder with category name + counter as the filename
-    total_images = 500  # Total number of images to save
     current_total = 0
 
     os.makedirs(output_dir, exist_ok=True)
+
 
     for idx, (image, label) in enumerate(places365_dataset):
         # Check if the label corresponds to one of the desired categories
         if label in desired_indices:
             category = desired_indices[label]
             saved_count[category] += 1
-            
+            #tensor to pil 
+            pil_image = to_pil_image(image)
             # Save the image with category name + counter as the filename
             image_name = f"{category}_{saved_count[category]}.jpg"
             image_path = os.path.join(output_dir, image_name)
-            image.save(image_path)
+            pil_image.save(image_path)
 
             current_total += 1
             if current_total >= total_images:
