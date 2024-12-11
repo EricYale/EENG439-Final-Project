@@ -3,7 +3,6 @@
 *.jpeg
 */*.jpeg
 *.DS_Store
-*.txt
 *.pyc
 
 dataset

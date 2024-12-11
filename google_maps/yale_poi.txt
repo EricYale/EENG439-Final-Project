@@ -1,0 +1,345 @@
+1 Church Street
+10 Amistad Street
+10 Sachem Street
+100 Church Street South
+100 College Street
+100 York Street
+104 York Square Place
+1201 Chapel Street
+1203 Chapel Street
+121 Whitney Avenue
+127 College Street
+129 York Street
+132 Davenport Avenue
+135 College Street
+143 Elm Street
+149 Elm Street
+149 York Street
+15 Hillhouse Avenue
+150 York Street
+153 College Street
+157 Church Street
+160 St. Ronan Street
+17 Hillhouse Avenue
+175 St. Ronan Street
+195 Church Street
+2 Church Street South
+2 Science Park
+202 Prospect Street
+202 York Street
+204 Prospect Street
+204 York Street
+205 Park Street
+205 Whitney Avenue
+210 Prospect Street
+211 Park Street
+212 York Street
+215 Park Street
+217 Park Street
+220 West Campus Drive
+220 York Street
+221 Whitney Avenue
+230 Prospect Street
+238 Prospect Street
+24 Hillhouse Avenue
+240 West Campus Drive
+242 Prospect Street
+246 Church Street
+25 Science Park
+250 Church Street
+250 West Campus Drive
+254 Elm Street
+254 Prospect Street
+258 Church Street / 96 Grove Street
+26 High Street
+27 Hillhouse Avenue
+270 Congress Avenue
+270 Crown Street
+272 Elm Street
+276 Prospect Street
+276–286 York Street
+279 Mansfield Street
+28 Hillhouse Avenue
+282 Prospect Street
+294-296 Elm Street
+295-297 Crown Street
+30 Hillhouse Avenue
+300 George Street
+300 Prospect Street
+301 Crown Street
+301 Prospect Street
+302 Temple Street
+305 Crown Street
+309 Edwards Street
+310 Prospect Street
+314 Prospect Street
+32 Edgewood Avenue
+320 Temple Street
+33 Hillhouse Avenue
+340 Edwards Street
+341-347 Crown Street
+344 Winchester Avenue
+35 Broadway
+35 Hillhouse Avenue
+350 Edwards Street
+350 George Street
+353 Crown Street
+36 Edgewood Avenue
+36 Sachem Street
+360 Edwards Street
+37 Hillhouse Avenue
+380 Edwards Street
+389 Whitney Avenue
+40 Temple Street
+400 West Campus Drive
+405 Temple Street
+41 Sachem Street
+410 West Campus Drive
+421 Temple Street
+43 Hillhouse Avenue
+432–434 Temple Street
+433 Temple Street
+442 Temple Street
+451 College Street
+459 Prospect Street
+46 Hillhouse Avenue
+493 College Street
+500 West Campus Drive
+51 Hillhouse Avenue
+53 Wall Street
+55 Church Street
+55 Whitney Avenue
+60 Temple Street
+63–65 Goffe Street
+66 Wall Street
+68 Mansfield Street
+70 Whitney Avenue
+700 West Campus Drive
+71 Goffe Street
+720 West Campus Drive
+77 Prospect Street
+81 Wall Street
+82–90 Wall Street
+83 Audubon Street
+85 Goffe Street
+85 Trumbull Street
+87 Goffe Street
+87 Trumbull Street
+910 West Campus Drive
+920 West Campus Drive
+94 York Square Place
+Administrative Office North
+Advanced Biosciences Center
+Air Rights Garage
+Allwin Hall
+Amistad Street Garage
+Anlyan Center
+Arnold Hall
+Athletic Grounds Facilities Maintenance Building
+Audubon Court Garage
+Baker Hall
+Baseball Practice Facility and Neil Clubhouse
+Bass Center
+Bass Library
+Battell Chapel
+Becton Center & Davies Auditorium
+Beinecke Golf House
+Beinecke Rare Book & Manuscript Library
+Bellamy Hall
+Benjamin Franklin College
+Berkeley College
+Berkeley College—North Court
+Betts House
+Bingham Hall
+Boardman Building
+Boyer Center
+Brady Memorial Lab
+Branford College
+Burnat-Grass Complex
+Bush Field
+Calvin Hill Day Care Center
+Cedarhurst School
+Central Campus Chiller Plant
+Central Power Plant
+Child Care & Community Education Center
+Class of 1954 Chemistry Research Building
+Class of 1954 Environmental Science Center
+Clinic Building
+Clinton Frank Field
+Collection Studies Center
+College Place
+Congress Place
+Connecticut Hall
+Connecticut Mental Health Center
+Coxe Cage
+Cullman-Heyman Tennis Center
+Curtis Hall
+Dana Clinic Building
+Davenport College
+DeWitt Family Field
+Dow Hall
+Dunham Laboratory
+Durfee Hall
+Dwight Hall & Memorial Chapel
+Elizabethan Club
+Energy Sciences Center I
+Energy Sciences Center II
+Esplanade Apartments
+Esplanade Apartments
+Esplanade Apartments
+Esplanade Apartments
+Esplanade Apartments
+Evans Hall
+Ezra Stiles College
+Farnam Hall
+Farnam Memorial Building
+Fisher Hall
+Fitkin Amphitheater
+Fitkin Memorial Pavilion
+Founders Hall
+Gales Ferry Boathouse
+Genome Analysis Center
+Gilder Boathouse
+Government Greenhouse
+Grace Hopper College
+Greeley Greenhouse
+Greeley Memorial Laboratory
+Green Hall
+Greenberg Conference Center
+Grove Street Garage
+Guilford Biological Field Station
+Harkness Memorial Hall
+Harris Building
+Helen Hadley Hall
+Hendrie Hall
+Hope Memorial Building
+Horchow Hall
+Howard Avenue Garage
+Howe Street Garage
+Humanities Quadrangle
+Hunter Building
+Ingalls Rink
+Integrated Science & Technology Center
+Ivy Manor Apartments
+Ivy Manor Apartments
+Johnson Field
+Jonathan Edwards College
+Kirtland Hall
+Kline Chemistry Laboratory
+Kline Geology Laboratory
+Kline Tower
+Kroon Hall
+Laboratory for Medicine & Pediatrics
+Laboratory for Surgery, Obstetrics & Gynecology
+Laboratory of Epidemiology & Public Health
+Lanman Center
+Lanman-Wright Hall
+Lapham Field House & Smilow Field Center
+Lauder Hall
+Lawrance Hall
+Leet Oliver Memorial Hall
+Leigh Hall
+Leitner Observatory and Planetarium
+Lewis Walpole Library
+Library Shelving Facility
+Linsly-Chittenden Hall
+Lippard Laboratory
+Lock Street Garage
+Loria Center
+Luce Hall
+Magnetic Resonance Center
+Malone Center
+Mansfield Street Apartments
+Marsh Garden Greenhouses
+Marsh Hall
+Mason Laboratory
+McClellan Hall
+McNay Family Sailing Center
+McPhillips Roberts Field House
+Miller Hall
+Molecular Innovations Center
+Morse College
+Nathan Smith Building
+Off Broadway Theater
+Osborn Memorial Laboratories
+Pauli Murray College
+Payne Whitney Gymnasium
+Phelps Hall & Gate
+Pierce Laboratory
+Pierson College
+Pierson-Sage Garage
+Primary Care Center
+Prospect Garden Apartments
+Prospect-Sachem Garage
+Ray Tompkins House
+Reese Stadium
+Rose Alumni House
+Rose Center
+Rosenfeld Hall
+Rosenkranz Hall
+Rudolph Hall
+Sage Hall
+Saybrook College
+Schwarzman Center
+Science Park Garage
+Seamco Building
+Sheffield-Sterling-Strathcona Hall
+Silliman College
+Slifka Center
+Sloane Physics Laboratory
+Smilow Cancer Hospital
+Sprague Hall
+St. Thomas More Chapel & Golden Center
+Steinbach Hall
+Sterling Chemistry Laboratory
+Sterling Divinity Quadrangle
+Sterling Hall of Medicine
+Sterling Law Building
+Sterling Memorial Library
+Sterling Power Plant
+Stoeckel Hall
+Street Hall
+T.M. Evans Hall
+Temple Street Garage
+Timothy Dwight College
+Tompkins East
+Tompkins Memorial Pavilion
+Trumbull College
+Tsai CITY
+Tsai Lacrosse Field House
+Undergraduate Admissions
+University Theatre
+Vanderbilt Hall
+W. L. Harkness Hall
+Warner House
+Watson Center
+Watson Hall
+Welch Hall
+West Campus Conference Center
+West Campus Fitness Center
+West Campus Storage & Receiving Center
+West Campus Welcome Center
+Whitehall Apartments
+Whitehall Apartments
+Whitehall Apartments
+Whitney Avenue Garage
+Whitney Grove Square
+Winchester Building
+Woodbridge Hall
+Woolsey Hall
+Wright Laboratory
+Wright Laboratory Connector
+Wright Laboratory West
+Yale Bookstore
+Yale Bowl
+Yale Center for British Art
+Yale Farm
+Yale Health Center
+Yale New Haven Hospital
+Yale New Haven Psychiatric Hospital
+Yale Peabody Museum
+Yale Physicians Building
+Yale Repertory Theatre
+Yale Science Building
+Yale University Art Gallery
+York-Crown Apartments
