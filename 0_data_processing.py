@@ -12,7 +12,7 @@ import pathlib
 from torchvision import transforms
 
 ROOT_PATH = os.path.dirname(os.path.abspath("__file__"))
-DATA_DIR = ROOT_PATH + '/data/yale'
+DATA_DIR = ROOT_PATH + '/data/raw_yale'
 
 os.makedirs(DATA_DIR, exist_ok=True)
 
@@ -44,7 +44,7 @@ transform = transforms.Compose([
     transforms.Resize((500, 500)),
     transforms.ToTensor(),
 ])
-output_dir = 'data/filtered_yale'
+output_dir = 'data/yale'
 
 os.makedirs(output_dir, exist_ok=True)
 
@@ -124,7 +124,7 @@ saved_count = {category: 0 for category in desired_indices.values()}
 
 print(f"Desired Indices: {desired_indices}")
 total_images = 500 
-output_dir = 'data/filtered_places365'
+output_dir = 'data/non_yale'
 
 # Save images into a single folder with category name + counter as the filename
 total_images = 500  # Total number of images to save
@@ -169,8 +169,8 @@ import shutil
 #     # Rename the file
 #     os.rename(old_file_path, new_file_path)
 
-folder1 = 'data/filtered_places365'
-folder2 = 'data/filtered_yale'
+folder1 = 'data/non_yale'
+folder2 = 'data/yale'
 
 output_base = 'data/output'
 train_dir = os.path.join(output_base, "train")
@@ -202,7 +202,7 @@ total_images = len(images)
 train_count = int(total_images * train_ratio)
 val_count = int(total_images * val_ratio)
 
- Split the images
+# Split the images
 train_images = images[:train_count]
 val_images = images[train_count:train_count + val_count]
 test_images = images[train_count + val_count:]

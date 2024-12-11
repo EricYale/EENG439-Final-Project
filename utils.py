@@ -5,7 +5,7 @@ import torch.nn as nn
 import torch.optim as optim
 import torch.nn.functional as F
 import torch.backends.cudnn as cudnn
-
+import numpy as np
 import torchvision
 import torchvision.transforms as transforms
 
@@ -26,11 +26,11 @@ def train(model, device, train_loader, optimizer, criterion, epoch, train_losses
         optimizer.zero_grad()
         output = model(data)
         loss = criterion(output, target)
-        loss.backward(retain_graph=True)
+        loss.backward()
         optimizer.step()
         train_loss += loss.item()*data.size(0)
 
-        _, predicted = torch.max(output,1)
+        predicted = (output > 0.5).float()
         total_train += target.size(0)
         correct += (predicted == target).sum().item()
 
@@ -60,7 +60,8 @@ def test(model, device, test_loader, criterion, epoch, test_losses, test_accurac
             pred = output.argmax(dim=1, keepdim=True)
             correct += pred.eq(target.view_as(pred)).sum().item()
     #test loss calculation
-    test_loss = (test_loss/len(test_loader.dataset))
+    test_loss += criterion(output, target).item() * data.size(0)
+
     test_losses.append(test_loss)
 
     #calculating the accuracy in the validation step
@@ -79,6 +80,7 @@ def fit(model, device, train_loader, test_loader, optimizer, criterion, no_of_ep
     train_accuracies = []
     test_accuracies = []
     for epoch in range(0, no_of_epochs):
+        print(f"epoch: {epoch}, pct : {np.round(epoch/no_of_epochs,2)}")
         train(model, device, train_loader, optimizer,
               criterion, epoch, train_losses, train_accuracies)
         test(model, device, test_loader, criterion,
