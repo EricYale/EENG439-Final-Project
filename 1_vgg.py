@@ -51,6 +51,48 @@ testloader = DataLoader(
     test_data, batch_size=BATCH_SIZE, shuffle=False
 )
 
-"Training"
+"----------------------Training"
 #def fit(model, device, train_loader, test_loader, optimizer, criterion, no_of_epochs):
-train_losses,test_losses,train_accuracies, test_accuracies = fit(model,device,trainloader,testloader,optimizer,criterion,5)
+train_losses,test_losses,train_accuracies, test_accuracies = fit(model,device,trainloader,testloader,optimizer,criterion,150)
+
+
+"-------------------------------------------------------Visualization-------------------------------"
+import matplotlib.pyplot as plt
+
+# Assuming you have these values stored in lists
+epochs = range(1, len(VGGtrain_losses) + 1)
+
+import matplotlib.pyplot as plt
+
+# Move losses to CPU and convert to NumPy if they are tensors
+VGGtrain_losses = [loss.cpu().numpy() if isinstance(loss, torch.Tensor) else loss for loss in VGGtrain_losses]
+VGGtest_losses = [loss.cpu().numpy() if isinstance(loss, torch.Tensor) else loss for loss in VGGtest_losses]
+
+# Plotting
+epochs = range(1, len(VGGtrain_losses) + 1)
+
+plt.figure(figsize=(12, 6))
+
+# Subplot 1: Training and Test Loss
+plt.subplot(1, 2, 1)
+plt.plot(epochs, VGGtrain_losses, label='Training Loss')
+plt.plot(epochs, VGGtest_losses, label='Test Loss')
+plt.title('Training and Test Loss over Epochs')
+plt.xlabel('Epochs')
+plt.ylabel('Loss')
+plt.legend()
+
+# Display the plot
+plt.show()
+
+# Plot training and test accuracy
+plt.subplot(1, 2, 2)
+plt.plot(epochs, VGGtrain_accuracies, label='Training Accuracy')
+plt.plot(epochs, VGGtest_accuracies, label='Test Accuracy')
+plt.title('Training and Test Accuracy over Epochs')
+plt.xlabel('Epochs')
+plt.ylabel('Accuracy')
+plt.legend()
+
+plt.tight_layout()
+plt.show()
