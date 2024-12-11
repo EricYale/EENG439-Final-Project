@@ -129,7 +129,6 @@ def places365_download():
     # Dictionary to track image counters for each category
     saved_count = {category: 0 for category in desired_indices.values()}
 
-    print(f"Desired Indices: {desired_indices}")
     total_images = 1200 
     output_dir = 'data/non_yale'
 
@@ -156,66 +155,78 @@ def places365_download():
                 break
     print(f"Downloaded {current_total} images into {output_dir}")
 
-# #----------------------------------------------------shuffle and split 
 
 def shuffle_split():
-    folder1 = 'data/non_yale'
-    folder2 = 'data/yale'
+    print("Shuffle split")
+
+    non_yale_dir = 'data/non_yale'
+    yale_dir = 'data/yale'
 
     output_base = 'data/output'
     train_dir = os.path.join(output_base, "train")
     val_dir = os.path.join(output_base, "val")
     test_dir = os.path.join(output_base, "test")
 
-    # Create output directories
     for dir_path in [train_dir, val_dir, test_dir]:
         os.makedirs(dir_path, exist_ok=True)
         
-    # Load all images from both folders
-    images = []
-    for folder in [folder1, folder2]:
-        for filename in os.listdir(folder):
-            if filename.endswith((".jpg", ".png", ".jpeg")):  # Filter image files
-                images.append(os.path.join(folder, filename))
+    non_yale_images = []
+    for filename in os.listdir(non_yale_dir):
+        if filename.endswith((".jpg", ".png", ".jpeg")):
+            non_yale_images.append(os.path.join(non_yale_dir, filename))
 
-    # Shuffle the combined list of images
-    random.seed(42)  # For reproducibility
-    random.shuffle(images)
+    yale_images = []
+    for filename in os.listdir(yale_dir):
+        if filename.endswith((".jpg", ".png", ".jpeg")):
+            yale_images.append(os.path.join(yale_dir, filename))
 
-    # Define the split ratios
+    random.seed(123)
+    random.shuffle(non_yale_images)
+    random.shuffle(yale_images)
+
     train_ratio = 0.7
     val_ratio = 0.2
     test_ratio = 0.1
 
-    # Calculate the number of images in each split
-    total_images = len(images)
-    train_count = int(total_images * train_ratio)
-    val_count = int(total_images * val_ratio)
+    train_ct_yale = int(len(yale_images) * train_ratio)
+    val_ct_yale = int(len(yale_images) * val_ratio)
+    train_ct_non_yale = int(len(non_yale_images) * train_ratio)
+    val_ct_non_yale = int(len(non_yale_images) * val_ratio)
 
-    # Split the images
-    train_images = images[:train_count]
-    val_images = images[train_count:train_count + val_count]
-    test_images = images[train_count + val_count:]
+    train_images_yale = yale_images[:train_ct_yale]
+    val_images_yale = yale_images[train_ct_yale:train_ct_yale + val_ct_yale]
+    test_images_yale = yale_images[train_ct_yale + val_ct_yale:]
 
-    # Helper function to copy images to a target folder
+    train_images_non_yale = non_yale_images[:train_ct_non_yale]
+    val_images_non_yale = non_yale_images[train_ct_non_yale:train_ct_non_yale + val_ct_non_yale]
+    test_images_non_yale = non_yale_images[train_ct_non_yale + val_ct_non_yale:]
+
     def copy_images(image_list, target_dir):
         for image_path in image_list:
             shutil.copy(image_path, target_dir)
 
     # Copy images to respective directories
-    copy_images(train_images, train_dir)
-    copy_images(val_images, val_dir)
-    copy_images(test_images, test_dir)
+    copy_images(train_images_yale, os.path.join(train_dir, "yale"))
+    copy_images(val_images_yale, os.path.join(val_dir, "yale"))
+    copy_images(test_images_yale, os.path.join(test_dir, "yale"))
 
-    print(f"Total images: {total_images}")
-    print(f"Training images: {len(train_images)}")
-    print(f"Validation images: {len(val_images)}")
-    print(f"Testing images: {len(test_images)}")
+    copy_images(train_images_non_yale, os.path.join(train_dir, "non_yale"))
+    copy_images(val_images_non_yale, os.path.join(val_dir, "non_yale"))
+    copy_images(test_images_non_yale, os.path.join(test_dir, "non_yale"))
 
+    print("Copied images to respective directories")
 
+    print("Total # yale images: ", len(yale_images))
+    print("# train yale: ", len(train_images_yale))
+    print("# val yale: ", len(val_images_yale))
+    print("# test yale: ", len(test_images_yale))
 
+    print("Total # non yale images: ", len(non_yale_images))
+    print("# train non yale: ", len(train_images_non_yale))
+    print("# val non yale: ", len(val_images_non_yale))
+    print("# test non yale: ", len(test_images_non_yale))
 
 # MAIN
-# transform_raw_yale_images()
+transform_raw_yale_images()
 places365_download()
 shuffle_split()
