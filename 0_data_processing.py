@@ -163,11 +163,19 @@ def shuffle_split():
     yale_dir = 'data/yale'
 
     output_base = 'data/output'
-    train_dir = os.path.join(output_base, "train")
-    val_dir = os.path.join(output_base, "val")
-    test_dir = os.path.join(output_base, "test")
+    output_train_dir = os.path.join(output_base, "train")
+    output_val_dir = os.path.join(output_base, "val")
+    output_test_dir = os.path.join(output_base, "test")
 
-    for dir_path in [train_dir, val_dir, test_dir]:
+    output_train_yale_dir = os.path.join(output_train_dir, "yale")
+    output_val_yale_dir = os.path.join(output_val_dir, "yale")
+    output_test_yale_dir = os.path.join(output_test_dir, "yale")
+
+    output_train_non_yale_dir = os.path.join(output_train_dir, "non_yale")
+    output_val_non_yale_dir = os.path.join(output_val_dir, "non_yale")
+    output_test_non_yale_dir = os.path.join(output_test_dir, "non_yale")
+
+    for dir_path in [output_train_yale_dir, output_val_yale_dir, output_test_yale_dir, output_train_non_yale_dir, output_val_non_yale_dir, output_test_non_yale_dir]:
         os.makedirs(dir_path, exist_ok=True)
         
     non_yale_images = []
@@ -205,14 +213,13 @@ def shuffle_split():
         for image_path in image_list:
             shutil.copy(image_path, target_dir)
 
-    # Copy images to respective directories
-    copy_images(train_images_yale, os.path.join(train_dir, "yale"))
-    copy_images(val_images_yale, os.path.join(val_dir, "yale"))
-    copy_images(test_images_yale, os.path.join(test_dir, "yale"))
+    copy_images(train_images_yale, os.path.join(output_train_dir, "yale"))
+    copy_images(val_images_yale, os.path.join(output_val_dir, "yale"))
+    copy_images(test_images_yale, os.path.join(output_test_dir, "yale"))
 
-    copy_images(train_images_non_yale, os.path.join(train_dir, "non_yale"))
-    copy_images(val_images_non_yale, os.path.join(val_dir, "non_yale"))
-    copy_images(test_images_non_yale, os.path.join(test_dir, "non_yale"))
+    copy_images(train_images_non_yale, os.path.join(output_train_dir, "non_yale"))
+    copy_images(val_images_non_yale, os.path.join(output_val_dir, "non_yale"))
+    copy_images(test_images_non_yale, os.path.join(output_test_dir, "non_yale"))
 
     print("Copied images to respective directories")
 
