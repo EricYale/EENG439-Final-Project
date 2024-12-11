@@ -23,6 +23,7 @@ def train(model, device, train_loader, optimizer, criterion, epoch, train_losses
 
     for data, target in train_loader:
         data, target = data.to(device), target.to(device)
+        target = target.float().unsqueeze(1).to(device)
         optimizer.zero_grad()
         output = model(data)
         loss = criterion(output, target)
@@ -55,6 +56,7 @@ def test(model, device, test_loader, criterion, epoch, test_losses, test_accurac
     with torch.no_grad():
         for data, target in test_loader:
             data, target = data.to(device), target.to(device)
+            target = target.float().unsqueeze(1).to(device)
             output = model(data)
             test_loss += criterion(output, target)
             pred = output.argmax(dim=1, keepdim=True)
