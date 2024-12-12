@@ -1,0 +1,22 @@
+2024-12-12 15:04:17 - Epoch 1: accuracy: 0.4832, loss: 0.8017, val_accuracy: 0.5059, val_loss: 0.7309
+2024-12-12 15:05:46 - Epoch 2: accuracy: 0.4962, loss: 0.7383, val_accuracy: 0.4883, val_loss: 0.7085
+2024-12-12 15:07:12 - Epoch 3: accuracy: 0.4979, loss: 0.7223, val_accuracy: 0.4795, val_loss: 0.7003
+2024-12-12 15:08:41 - Epoch 4: accuracy: 0.5084, loss: 0.7056, val_accuracy: 0.4985, val_loss: 0.6940
+2024-12-12 15:10:06 - Epoch 5: accuracy: 0.5352, loss: 0.7020, val_accuracy: 0.5455, val_loss: 0.6877
+2024-12-12 15:11:32 - Epoch 6: accuracy: 0.5473, loss: 0.6915, val_accuracy: 0.5748, val_loss: 0.6815
+2024-12-12 15:12:59 - Epoch 7: accuracy: 0.5532, loss: 0.6906, val_accuracy: 0.5938, val_loss: 0.6754
+2024-12-12 15:14:27 - Epoch 8: accuracy: 0.5570, loss: 0.6855, val_accuracy: 0.6129, val_loss: 0.6701
+2024-12-12 15:15:58 - Epoch 9: accuracy: 0.5741, loss: 0.6768, val_accuracy: 0.6217, val_loss: 0.6648
+2024-12-12 15:17:32 - Epoch 10: accuracy: 0.5762, loss: 0.6790, val_accuracy: 0.6349, val_loss: 0.6593
+2024-12-12 15:17:33 - Initial validation loss: 0.8015, validation accuracy: 0.5015
+2024-12-12 15:19:01 - Epoch 11: accuracy: 0.5988, loss: 0.6680, val_accuracy: 0.6364, val_loss: 0.6587
+2024-12-12 15:20:30 - Epoch 12: accuracy: 0.5884, loss: 0.6698, val_accuracy: 0.6364, val_loss: 0.6582
+2024-12-12 15:21:58 - Epoch 13: accuracy: 0.6047, loss: 0.6630, val_accuracy: 0.6364, val_loss: 0.6576
+2024-12-12 15:23:26 - Epoch 14: accuracy: 0.5938, loss: 0.6716, val_accuracy: 0.6378, val_loss: 0.6571
+2024-12-12 15:24:55 - Epoch 15: accuracy: 0.6030, loss: 0.6672, val_accuracy: 0.6378, val_loss: 0.6565
+2024-12-12 15:26:26 - Epoch 16: accuracy: 0.6126, loss: 0.6603, val_accuracy: 0.6408, val_loss: 0.6560
+2024-12-12 15:28:01 - Epoch 17: accuracy: 0.5988, loss: 0.6658, val_accuracy: 0.6408, val_loss: 0.6554
+2024-12-12 15:29:32 - Epoch 18: accuracy: 0.6064, loss: 0.6655, val_accuracy: 0.6408, val_loss: 0.6549
+2024-12-12 15:31:04 - Epoch 19: accuracy: 0.6064, loss: 0.6645, val_accuracy: 0.6437, val_loss: 0.6544
+2024-12-12 15:32:40 - Epoch 20: accuracy: 0.6064, loss: 0.6627, val_accuracy: 0.6437, val_loss: 0.6539
+2024-12-12 15:32:51 - Final test accuracy: 0.6111, test loss: 0.6668
