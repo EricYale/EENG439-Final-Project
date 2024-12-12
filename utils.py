@@ -29,7 +29,7 @@ def train(model, device, train_loader, optimizer, criterion, epoch, train_losses
         loss = criterion(output, target)
         loss.backward()
         optimizer.step()
-        train_loss += loss.item()*data.size(0)
+        train_loss += loss.item()*data.size(0)  
 
         predicted = (output > 0.5).float()
         total_train += target.size(0)

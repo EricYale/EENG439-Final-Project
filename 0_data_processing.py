@@ -234,6 +234,6 @@ def shuffle_split():
     print("# test non yale: ", len(test_images_non_yale))
 
 # MAIN
-transform_raw_yale_images()
+#transform_raw_yale_images()
 places365_download()
 shuffle_split()
