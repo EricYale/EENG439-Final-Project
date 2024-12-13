@@ -9,3 +9,4 @@
 data/
 scratch*
 old_code
+__pycache__

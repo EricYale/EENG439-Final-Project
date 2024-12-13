@@ -1,18 +1,6 @@
 # EENG439-Final-Project
+Code for Linh Pham and Eric Yoon's EENG439 final project.
 
+Classify images as either taken on Yale campus or not.
 
-1. We trained the model from scratch, was not working out (high bias!)
-- VG11
-
-VGG11
-VGG19 
-RESNET18 
-RESNET50 
-
-2. Transfer learning: 
-
-https://github.com/CSAILVision/places365 
-
-
-3. Feature  
-
+Final writeup is in Google Drive.
