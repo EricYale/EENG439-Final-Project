@@ -2,5 +2,3 @@
 Code for Linh Pham and Eric Yoon's EENG439 final project.
 
 Classify images as either taken on Yale campus or not.
-
-Final writeup is in Google Drive.
