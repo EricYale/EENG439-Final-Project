@@ -45,32 +45,19 @@
 
 
 
-
-
 \setcounter{secnumdepth}{0} %May be changed to 1 or 2 if section numbers are desired.
-
-% The file aaai24.sty is the style file for AAAI Press
-% proceedings, working notes, and technical reports.
-%
-
-% Title
-
-% Your title must be in mixed case, not sentence case.
-% That means all verbs (including short verbs like be, is, using,and go),
-% nouns, adverbs, adjectives should be capitalized, including both words in hyphenated terms, while
-% articles, conjunctions, and prepositions are lower case unless they
-% directly follow a colon or long dash
-\title{Capturing Yale’s Campus: Geolocation Based On Visual Features}
-\author{
-    Linh Pham\equalcontrib,
-    Eric Yoon\equalcontrib
-}
-
 
 
 \begin{document}
 
-\maketitle
+\begin{titlepage}
+   \vspace*{\stretch{1.0}}
+   \begin{center}
+      \Large\textbf{Capturing Yale’s Campus: Geolocation Based On Visual Features}\\
+      \large\textit{Linh Pham, Eric Yoon}
+   \end{center}
+   \vspace*{\stretch{2.0}}
+\end{titlepage}
 
 \begin{abstract}
 Geolocation data is invaluable for researchers and photographers alike, but many images come without geolocation data due to messaging and social media apps removing the information for privacy purposes. While previous research has been conducted on re-constructing geolocation data from an image’s pixels, our approach focuses on a specific use-case of determining whether an image was taken at a prespecified location. To demonstrate this, we created a model that classifies whether an image was taken on Yale campus or not. To address the sparse and unlabeled nature of training photos taken on Yale campus, we propose three methods of data collection: (1) using public Instagram accounts, (2) using the Google Maps Places API, and (3) using our personal photo libraries. We then used transfer learning to develop a binary classification model, the best of which had a final test accuracy of 92\%. We observed that the model is generally able to recognize Yale-like scenery and architecture, but fails for some specific types of images.
@@ -339,5 +326,7 @@ Weyand, Tobias, et al. “PlaNet - Photo Geolocation with Convolutional Neural N
 
 \end{thebibliography}
 
+‌
+‌
 
 \end{document}
