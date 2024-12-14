@@ -10,3 +10,6 @@ data/
 scratch*
 old_code
 __pycache__
+*.h5
+*.txt
+*.png

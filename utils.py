@@ -61,11 +61,20 @@ def configure_data(train_dataset, validation_dataset, test_dataset):
 
     
 def plot_acc_loss(acc, val_acc, loss, val_loss, initial_epochs = 10): 
+    
+    print('acc: ', type(acc))
+    print('val_acc: ', type(val_acc))
+    print('loss: ', type(loss))
+    print('val_loss: ', type(val_loss))
+    
     plt.figure(figsize=(8, 8))
     plt.subplot(2, 1, 1)
     plt.plot(acc, label='Training Accuracy')
     plt.plot(val_acc, label='Validation Accuracy')
-    plt.ylim([0.8, 1])
+    ymin = np.min(np.concatenate([acc, val_acc]))
+    ymax = np.max(np.concatenate([acc, val_acc]))
+    ystd = np.std(np.concatenate([acc, val_acc]))  # Add a bit of space
+    plt.ylim([ymin - ystd, ymax + ystd])
     plt.plot([initial_epochs-1,initial_epochs-1],
             plt.ylim(), label='Start Fine Tuning')
     plt.legend(loc='lower right')
@@ -74,7 +83,10 @@ def plot_acc_loss(acc, val_acc, loss, val_loss, initial_epochs = 10):
     plt.subplot(2, 1, 2)
     plt.plot(loss, label='Training Loss')
     plt.plot(val_loss, label='Validation Loss')
-    plt.ylim([0, 1.0])
+    ymin = np.min(np.concatenate([loss, val_loss]))
+    ymax = np.max(np.concatenate([loss, val_loss]))
+    ystd = np.std(np.concatenate([loss, val_loss]))  # Add a bit of space
+    plt.ylim([ymin - ystd, ymax + ystd])
     plt.plot([initial_epochs-1,initial_epochs-1],
             plt.ylim(), label='Start Fine Tuning')
     plt.legend(loc='upper right')
