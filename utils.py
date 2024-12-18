@@ -7,6 +7,7 @@ os.environ["CUDA_VISIBLE_DEVICES"] = "-1"
 import keras 
 from utils import * 
 import logging
+import argparse
 
 def download_data(batch_size, img_size): 
     """_summary_
@@ -120,6 +121,20 @@ def log_epoch_results(epoch, total_epochs, steps, step_time, accuracy, loss, val
     )
     logging.info(log_message)
 
+
+
+#----Args for command line 
+
+def parse_args(): 
+    parser = argparse.ArgumentParser(description="Run Model")
+    parser.add_argument('--model_type', nargs='?', default='VGG16',
+                        help='Specify a loss type from {MobileNetV2 or VGG16}.')
+    parser.add_argument('--batch_size', type = int, default=32 ,
+                        help='type int for batch size')
+    parser.add_argument('--img_size', nargs='?', default=(224,224),
+                        help='Specify a image size in the form of tuple. Ex. (224, 224s)')
+
+    return parser.parse_args()
 
 # import sys
 # import os

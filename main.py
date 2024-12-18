@@ -1,4 +1,5 @@
 import os
+import sys
 import keras 
 import logging
 from utils import * 
@@ -9,9 +10,15 @@ from tensorflow.keras.callbacks import Callback
 
 os.environ["CUDA_VISIBLE_DEVICES"] = "-1"
 
-MODEL = "imagenet"
-BATCH_SIZE = 32 
-IMG_SIZE = (224,224)
+
+args = parse_args()
+# MODEL = "vgg16"
+# BATCH_SIZE = 32 
+# IMG_SIZE = (224,224)
+MODEL = args.model_type 
+BATCH_SIZE = args.batch_size
+IMG_SIZE = args.img_size
+
 logging.basicConfig(
     filename= MODEL +  '_training_log.txt',  # Log file name
     level=logging.INFO,  # Log level
@@ -58,25 +65,25 @@ preprocess_input = tf.keras.applications.mobilenet_v2.preprocess_input
 rescale = tf.keras.layers.Rescaling(1./127.5, offset=-1)
 
 #Base model 
-# Create the base model from the pre-trained model MobileNet V2
+# Create the base model from the pre-trained model 
 IMG_SHAPE = IMG_SIZE + (3,)
-# base_model = tf.keras.applications.MobileNetV2(input_shape=IMG_SHAPE,
+# base_model = tf.keras.applications.VGG16(input_shape=IMG_SHAPE,
 #                                             include_top=False,
 #                                             weights='imagenet')
 
     
         # Dynamically get the model function from tf.keras.applications
 try:
-    base_model = getattr(tf.keras.applications, args.model_type)(
+    base_model = getattr(tf.keras.applications,MODEL)(
         input_shape=IMG_SHAPE,
         include_top=False,
         weights='imagenet'
     )
 except AttributeError:
-    print(f"Error: {args.model_type} is not a valid model type in tf.keras.applications.")
-    return
+    print(f"Error: {MODEL} is not a valid model type in tf.keras.applications.")
+    sys.exit()
 
-print(f"Loaded model: {args.model_type}")
+print(f"Loaded model: {MODEL}")
 print(base_model.summary())
 
 image_batch, label_batch = next(iter(train_dataset))
